@@ -1,0 +1,20 @@
+# session login - good password
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{"email": "pnsidou@gmail.com",
+"password": "minha senha"}
+
+# session login - good password Joao Grande
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{"email": "joaogrande@gmail.com",
+"password": "minha senha"}
+
+# session login - bad password
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{"email": "pnsidou@gmail.com",
+"password": "senha errada"} 

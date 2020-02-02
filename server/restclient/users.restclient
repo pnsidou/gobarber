@@ -17,22 +17,27 @@ Content-Type: application/json
 # update user Pedro 
 PUT http://localhost:3333/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTU4MDM4Nzk3NiwiZXhwIjoxNTgwOTkyNzc2fQ.o378xvKFDfHAzaNfo0zaqMcsaDCKOmmF7G6l_PvYDiA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNjcxNzA3LCJleHAiOjE1ODEyNzY1MDd9.Tn6v_SsEGLoxQ7o3ZMNFE8x65jgZQVchBJHnvgo5Lws
 
 {"name": "Pedro Niederhagebock Sidou",
 "email": "pnsidou@gmail.com",
 "oldPassword": "minha senha",
 "password": "minha senha",
-"confirmPassword" : "minha senha"
+"confirmPassword" : "minha senha",
+"avatar_id": 1
 }
 
 # update user Joao Grande
 PUT http://localhost:3333/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYsImlhdCI6MTU4MDM5NDc2NywiZXhwIjoxNTgwOTk5NTY3fQ.JHWoTAyxzlMDUfIDKEce_dfFT0Yv30QpoDje1wApCiI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTgwNjQ2MzUzLCJleHAiOjE1ODEyNTExNTN9.7gLYzN5ksGKnDFz1PvnyClSTq9v3G1vRUJP3DxpngL4
 
 {"name": "Joao grande",
-"email": "joaograndenovo@gmail.com",
-"oldPassword": "nova senha",
-"password": "minha senha"}
+"email": "joaogrande@gmail.com",
+"oldPassword" : "minha senha",
+"password" : "minha senha",
+"confirmPassword" : "minha senha",
+"provider": true,
+"avatar_id": 2 
+}
 

@@ -1,0 +1,3 @@
+# list providers
+GET http://localhost:3333/providers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTgwNjQ2MzUzLCJleHAiOjE1ODEyNTExNTN9.7gLYzN5ksGKnDFz1PvnyClSTq9v3G1vRUJP3DxpngL4

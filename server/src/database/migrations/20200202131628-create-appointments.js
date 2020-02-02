@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('appointements', {
+    return queryInterface.createTable('appointments', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -30,7 +30,7 @@ module.exports = {
       cancelledAt: {
         type: Sequelize.DATE,
         allowNull: true
-      }
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false
@@ -43,6 +43,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('appointements')
+    return queryInterface.dropTable('appointments')
   }
 }

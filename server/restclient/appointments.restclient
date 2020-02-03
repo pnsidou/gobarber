@@ -11,5 +11,8 @@ GET http://localhost:3333/appointments?page=1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNjc3MTI4LCJleHAiOjE1ODEyODE5Mjh9.mKv83tiiQfSSEDB5n14Y-nbYve8VCybDd_OO4hp3Wjk
 
-{"provider_id": 3,
- "date": "2020-02-07T22:00:00-03:00"}
+
+# delete appointment 
+DELETE http://localhost:3333/appointments/16
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNzQ5NTA4LCJleHAiOjE1ODEzNTQzMDh9.q1WtUA7_YpuUuy8PiHSUY_tahcZcS2-5_BnSTcWkyFU
+

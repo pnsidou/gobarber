@@ -1,0 +1,3 @@
+# list appointments from a provider
+GET http://localhost:3333/schedule?date=2020-02-03T00:00:00-03:0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTgwNjg3OTU4LCJleHAiOjE1ODEyOTI3NTh9.ec4NMub8p9HnYH-huG7AITw5L9P4WBTBH7lqWM7fbmY

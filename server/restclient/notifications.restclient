@@ -1,3 +1,7 @@
 # get list of notification for user
 GET http://localhost:3333/notifications
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNjc3MTI4LCJleHAiOjE1ODEyODE5Mjh9.mKv83tiiQfSSEDB5n14Y-nbYve8VCybDd_OO4hp3Wjk
+
+# update notification to read
+PUT http://localhost:3333/notifications/5e3823e6f332d44745b77de7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNjc3MTI4LCJleHAiOjE1ODEyODE5Mjh9.mKv83tiiQfSSEDB5n14Y-nbYve8VCybDd_OO4hp3Wjk

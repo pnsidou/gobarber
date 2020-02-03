@@ -5,6 +5,7 @@ import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
 import Notification from '../schemas/Notification';
+import Mail from '../../lib/Mail';
 
 class AppointmentController {
   async index(req, res) {
@@ -105,8 +106,6 @@ class AppointmentController {
       locale: pt,
     });
 
-    console.log(user);
-
     await Notification.create({
       content: `Novo agendamento de ${user.name} para o dia ${formattedDate}.`,
       user: user.id,
@@ -116,7 +115,20 @@ class AppointmentController {
   }
 
   async delete(req, res) {
-    const appointment = await Appointment.findByPk(req.params.id);
+    const appointment = await Appointment.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          as: 'provider',
+          attributes: ['name', 'email'],
+        },
+        {
+          model: User,
+          as: 'user',
+          attributes: ['name'],
+        },
+      ],
+    });
 
     if (!appointment) {
       return res.json(400).json({ error: 'Appointment does not exist' });
@@ -139,7 +151,23 @@ class AppointmentController {
 
     appointment.cancelled_at = new Date();
 
-    appointment.save();
+    await appointment.save();
+
+    await Mail.sendMail({
+      to: `${appointment.provider.name} <${appointment.provider.email}>`,
+      subject: 'Appointment cancelled',
+      template: 'cancellation',
+      context: {
+        provider: appointment.provider.name,
+        user: appointment.user.name,
+        date: format(appointment.date, "dd' de 'MMMM', às 'H:mm'h'", {
+          locale: pt,
+        }),
+      },
+    }).catch(err => {
+      console.log('Message couldnt be sent', err);
+      return { error: 'Message could not be sent' };
+    });
 
     return res.json(appointment);
   }

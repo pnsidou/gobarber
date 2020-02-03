@@ -13,6 +13,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
 
 
 # delete appointment 
-DELETE http://localhost:3333/appointments/16
+DELETE http://localhost:3333/appointments/10
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNzQ5NTA4LCJleHAiOjE1ODEzNTQzMDh9.q1WtUA7_YpuUuy8PiHSUY_tahcZcS2-5_BnSTcWkyFU
 

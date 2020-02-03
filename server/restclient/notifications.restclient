@@ -1,0 +1,3 @@
+# get list of notification for user
+GET http://localhost:3333/notifications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNjc3MTI4LCJleHAiOjE1ODEyODE5Mjh9.mKv83tiiQfSSEDB5n14Y-nbYve8VCybDd_OO4hp3Wjk

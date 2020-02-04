@@ -4,7 +4,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgwNjc3MTI4LCJleHAiOjE1ODEyODE5Mjh9.mKv83tiiQfSSEDB5n14Y-nbYve8VCybDd_OO4hp3Wjk
 
 {"provider_id": 3,
- "date": "2020-02-09T22:00:00-03:00"}
+ "date": "2020-02-04T23:00:00-03:00"}
 
 # list appointments
 GET http://localhost:3333/appointments?page=1

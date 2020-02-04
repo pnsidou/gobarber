@@ -1,3 +1,7 @@
 # list providers
 GET http://localhost:3333/providers
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTgwNjQ2MzUzLCJleHAiOjE1ODEyNTExNTN9.7gLYzN5ksGKnDFz1PvnyClSTq9v3G1vRUJP3DxpngL4
+
+# listi available 
+GET http://localhost:3333/providers/3/available?date=1580825826009
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTgwNjQ2MzUzLCJleHAiOjE1ODEyNTExNTN9.7gLYzN5ksGKnDFz1PvnyClSTq9v3G1vRUJP3DxpngL4

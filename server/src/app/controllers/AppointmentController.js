@@ -12,7 +12,7 @@ import Queue from '../../lib/Queue';
 class AppointmentController {
   async index(req, res) {
     const { page = 1 } = req.query;
-    const itemPerPage = 2;
+    const itemPerPage = 5;
 
     const appointments = await Appointment.findAll({
       where: {
@@ -22,7 +22,7 @@ class AppointmentController {
       order: ['date'],
       limit: itemPerPage,
       offset: (page - 1) * itemPerPage,
-      attributes: ['id', 'date'],
+      attributes: ['id', 'date', 'past', 'cancellable'],
       //*
       include: [
         {

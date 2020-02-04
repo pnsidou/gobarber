@@ -24,7 +24,7 @@ class CancellationMail {
         }),
       },
     }).catch(err => {
-      console.log('Message couldnt be sent', err);
+      console.log('Message could not be sent', err);
       return { error: 'Message could not be sent' };
     });
   }

@@ -1,4 +1,6 @@
 yarn.lock
+tmp
+restclient/files.restclient
 yarn-error.log
 package-lock.json
 node_modules

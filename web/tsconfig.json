@@ -1,15 +1,21 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "paths": {
-      "~/*": ["*"]
-    },
     "target": "es5",
-    "lib": ["es2019", "dom", "dom.iterable", "esnext"],
+    "lib": [
+      "es2019",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "plugins": [
       {
         "name": "typescript-styled-plugin",
-        "tags": ["styled", "css", "sty"]
+        "tags": [
+          "styled",
+          "css",
+          "sty"
+        ]
       }
     ],
     "allowJs": true,
@@ -25,5 +31,7 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

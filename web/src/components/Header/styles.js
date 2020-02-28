@@ -58,9 +58,10 @@ export const Profile = styled.div`
       font-size: 12 px;
       color: #999;
     }
-
-    img {
-      height: 32px;
-    }
+  }
+  img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
   }
 `;

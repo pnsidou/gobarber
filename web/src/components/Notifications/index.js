@@ -35,14 +35,12 @@ export default function Notifications() {
   }, []);
 
   function handleToggleVisible() {
-    console.tron.log('visible', visible);
     setVisible(!visible);
   }
 
   async function handleMarkAsRead(id) {
-    console.tron.log('HANDLE MARK ', id);
     try {
-      await api.put(`notifications/${id})`);
+      await api.put(`notifications/${id}`);
 
       setNotifications(
         notifications.map(notification =>
@@ -52,7 +50,7 @@ export default function Notifications() {
         )
       );
     } catch (err) {
-      console.tron.error('Falha na atualização do estado da notificação.');
+      console.tron.error('Falha na atualização do estado da notificação.', err);
     }
   }
 
@@ -67,12 +65,14 @@ export default function Notifications() {
             <Notification key={notification._id} unread={!notification.read}>
               <p>{notification.content}</p>
               <time>{notification.timeDistance}</time>
-              <button
-                type="button"
-                onClick={() => handleMarkAsRead(notification._id)}
-              >
-                Marcar como lida
-              </button>
+              {!notification.read && (
+                <button
+                  type="button"
+                  onClick={() => handleMarkAsRead(notification._id)}
+                >
+                  Marcar como lida
+                </button>
+              )}
             </Notification>
           ))}
         </Scroll>

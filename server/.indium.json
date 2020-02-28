@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "name": "GoBarber",
+      "type": "node",
+      "host": "localhost",
+      "port": 9229
+    }
+  ]
+}

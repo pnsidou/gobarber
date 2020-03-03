@@ -28,7 +28,7 @@ const SignIn = ({ navigation }) => {
         <Form>
           <FormInput
             icon="mail-outline"
-            keyboardType="mail-address"
+            keyboardType="email-address"
             autoCorrect={false}
             autoCapitalize="none"
             placeholder="Digite seu e-mail"

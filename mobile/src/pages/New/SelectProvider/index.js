@@ -19,7 +19,7 @@ export default function SelectProvider({ navigation }) {
     }
 
     loadProviders();
-  }, [providers]);
+  }, []);
 
   return (
     <Background>

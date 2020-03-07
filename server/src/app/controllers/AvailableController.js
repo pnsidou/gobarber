@@ -21,7 +21,7 @@ class AvailableController {
 
     const searchDate = Number(date);
 
-    const appointments = await Appointments.finddAll({
+    const appointments = await Appointments.findAll({
       where: {
         provider_id: req.params.providerId,
         cancelled_at: null,
@@ -55,7 +55,6 @@ class AvailableController {
         0
       );
 
-      console.log();
       return {
         time,
         value: format(value, "yyyy-MM-dd'T'HH:mm:ssxxx"),
